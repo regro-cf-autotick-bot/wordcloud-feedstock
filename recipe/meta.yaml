@@ -1,4 +1,4 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.5" %}
 
 package:
   name: wordcloud
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/wordcloud/wordcloud-{{ version }}.tar.gz
-  sha256: b273d8a5ded97d3ead904046b49464dcb71119ee79df875072a4c105cadd347a
+  sha256: 6ac7c1378f2886d7e849600a306febd41d0d46b15ce876d665a3e549f5403b0b
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - wordcloud_cli = wordcloud.__main__:main
@@ -29,7 +29,7 @@ requirements:
     - cython >=0.29.33
   run:
     - python
-    - numpy >=1.6.1
+    - numpy >=1.19
     - pillow
     - matplotlib-base
 
